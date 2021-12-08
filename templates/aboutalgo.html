@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+font-family: Georgia, serif;
+  background-color: #ADD8E6;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: black;
+    text-align: right;
+    color: #fff;
+   
+}.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: black;
+    text-align: right;
+    color: #fff;
+   
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.header {
+  padding: 10px;
+  background: white;
+}
+
+
+
+.topnav-right {
+  float: right;
+}
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  float: left;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  
+  color: #4CAF50;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 350px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.pad{
+border-style: ridge;
+ padding: 30px;
+ font-weight: bold;
+ }
+mark { 
+  background-color: white;
+  color: black;
+}
+mark1{ 
+  background-color:yellow;
+  color: green;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a  href="home.html">Home</a>
+  <a href="index.html">Predict News</a>
+  <div class="topnav-right">
+    <a href="FakeNewsDetection.html">Display Data Visualization</a>
+    <a href="about.html">About</a>
+	<a href="aboutalgo.html">How It Works?</a>
+  </div>
+</div>
+	<h1><mark1>Passive Aggressive Classifier</mark1></h1>
+<div class="pad">
+<div class="row">
+  <div class="column" >
+   <p>This is a high-level overview of the algorithm explaining how it works and when to use it. 
+	It does not go deep into the mathematics of how it works.
+	Passive-Aggressive algorithms are generally used for large-scale learning.
+	It is one of the few ‘online-learning algorithms‘. In online machine learning algorithms, 
+	the input data comes in sequential order and the machine learning model is updated step-by-step, 
+	as opposed to batch learning, where the entire training dataset is used at once.
+	This is very useful in situations where there is a huge amount of data and 
+	it is computationally infeasible to train the entire dataset because of the sheer size of the data.
+	We can simply say that an online-learning algorithm will get a training example, update the classifier, and then throw away the example</p>
+  </div>
+  <div class="column" >
+    <p>A very good example of this would be to detect fake news on a social media website like Twitter,
+	 where new data is being added every second. To dynamically read data from Twitter continuously, 
+	the data would be huge, and using an online-learning algorithm would be ideal.
+
+	Passive-Aggressive algorithms are somewhat similar to a Perceptron model, 
+	in the sense that they do not require a learning rate. However, they do include a regularization parameter.
+	Understanding the mathematics behind this algorithm is not very simple and is beyond the scope of a single article.
+	If you want to work on big data, this is a very important classifier and I encourage you to go ahead and 
+	try to build a project using this classifier and use live data from a social media website like Twitter as input.</p>
+  </div>
+</div>
+</div>
+<div class="footer">
+    Fake News Detection
+   </br>
+</div>
+</body>
+</html>

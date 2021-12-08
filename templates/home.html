@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+ background-image: url('/static/BGI.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 100% 100%;
+  
+}
+.ribbon-highlight{
+  position:relative;
+  margin:0.1em;
+}
+.ribbon-highlight:before{
+  content:"";
+  z-index:-1;
+  left:-0.6em;
+  top:0.1em;
+  border-width:0.6em;
+  border-style:solid;
+  border-color:yellow;
+  position:absolute;
+  width:100%;
+  border-left-color:transparent;
+  border-right-color:transparent;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav-right {
+  float: right;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.header {
+  padding: 10px;
+  background: white;
+}
+
+.footer {
+position: fixed;
+   right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: black;
+    text-align: right;
+    color: #fff;
+   
+}
+.column {
+  float: left;
+  width: 30.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.pad{
+border-style: ridge;
+ padding: 30px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}p
+{
+	line-height: 1.5;
+	font-weight: bold;
+}
+mark{ 
+  background-color: white;
+  color: black;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="topnav">
+  <a  href="home.html">Home</a>
+  <a href="index.html">Predict News</a>
+  <div class="topnav-right">
+    <a href="FakeNewsDetection.html">Display Data Visualization</a>
+    <a href="about.html">About</a>
+	<a href="aboutalgo.html">How it Works?</a>
+  </div>
+</div>
+
+ <h1 align="center"><span class="ribbon-highlight">Fake News Detection</span></h1>
+ <div class="pad">
+ <div class="row">
+   <div class="column">
+  <p align="justify" ><mark> The proliferation of fake news is a significant challenge for modern democratic societies.
+    Inaccurate information can affect the health and well-being of people, especially during the challenging times of the COVID-19 pandemic.
+    Furthermore, disinformation erodes public trust in democratic institutions, by preventing citizens from making rational decisions based on verifiable facts.
+    A disturbing study has shown that fake news reach more people and spread faster than actual facts, especially on social media.
+    MIT researchers have discovered that fake news are 70% more likely to be shared on platforms like Twitter and Facebook</mark></p></div>
+	 <div class="column">
+  <p align="justify"><mark>Fake news campaigns are a form of modern information warfare, used by states and other entities to undermine the power and legitimacy of their opponents.
+    According to EU authorities, european countries have been targeted by chinese and russian disinformation campaigns, spreading falsehoods about numerous topics, including the COVID-19 pandemic.
+    The East StratCom Task Force has been set up to deal with that problem, by monitoring and debunking fake news about EU member states.Fact-checkers are individuals that verify the factual correctness of published news. 
+      Those professionals debunk fake news by identifying their false claims.</mark></p></div>
+	<div class="column">
+  <p align="justify">
+	  <img src="{{url_for('static', filename='social.gif')}}" align="center-up"/>
+
+  </p>
+</div></div> <br><br><br><br></div>
+  <div class="footer">Fake News Detection
+</div>
+
+<br>
+<!--<img src="{{url_for('static', filename='img1.jpg')}}" align="middle" />-->
+
+</body>
+</html>

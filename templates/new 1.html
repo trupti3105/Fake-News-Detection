@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #ADD8E6;
+}
+mark { 
+  background-color:purple;
+  color: white;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav-right {
+  float: right;
+}
+.header {
+  padding: 10px;
+  background: white;
+}
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: black;
+    text-align: right;
+    color: #fff;
+}
+
+.pad{
+ border-style: ridge;
+ padding: 30px;
+ }
+</style>
+</head>
+<body>
+<div class="topnav">
+  <a  href="home.html">Home</a>
+  <a href="index.html">Predict News</a>
+  <div class="topnav-right">
+    <a href="FakeNewsDetection.html">Display Data Visualization</a>
+    <a href="about.html">About</a>
+	<a href="aboutalgo.html">How it Works?</a>
+  </div>
+</div>
+<h1 align="center"><mark>Data Visualization</mark></h1><b>
+<div class="pad">
+<h2 align="center"><a href="#id1">How many Articles Per Subject?</a> </h2>
+<h2 align="center"><a href="#id2">How many Fake and Real Articles?</a></h2>
+<h2 align="center"><a href="#id3">Word Cloud for Fake News </a></h2>
+<h2 align="center"><a href="#id4">Word Cloud for Real News</a> </h2>
+<h2 align="center"><a href="#id5">Most Frequent Words in Fake News </a> </h2>
+<h2 align="center"><a href="#id6">Most Frequent Words in Real News </a> </h2>
+<h2 align="center"><a href="#id7">Comparision of Different Model</a></h2><br/><hr/>
+<table border="1"  id="id1">
+<tr><td>Subject</td><td>Count</td></tr>
+<tr><td>Government News</td><td> 1570</td></tr>
+<tr><td>Middle-east</td><td> 778</td></tr>
+<tr><td>News</td><td> 9050</td></tr>
+<tr><td>US_News</td><td> 783</td></tr>
+<tr><td>left-news </td><td> 4459</td></tr>
+<tr><td>politics </td><td> 6841</td></tr>
+<tr><td>politicsNews</td><td> 11272</td></tr>
+<tr><td>worldnews </td><td> 10145</td></tr>
+</table>
+<img src="{{url_for('static', filename='I1.PNG')}}" align="middle"><hr/></img>
+<table border="1"  id="id2">
+<tr><td>Target</td><td>Count</td></tr>
+<tr><td>Fake</td><td> 23481</td></tr>
+<tr><td>True </td><td> 21417</td></tr>
+</table>
+
+<img id="id2"src="{{url_for('static', filename='I2.PNG')}}" align="middle" /><br/><hr/>
+<img  id="id3"src="{{url_for('static', filename='I3.PNG')}}" align="middle" /><br/><hr/>
+<img id="id4"src="{{url_for('static', filename='I4.PNG')}}" align="middle" /><br/><hr/>
+<table border="1"  id="id5">
+<tr><td>Subject</td><td>Count</td></tr>
+<tr><td>Trump</td><td>71000</td></tr>
+<tr><td>Said</td><td> 30000</td></tr>
+<tr><td>People</td><td>27000</td></tr>
+<tr><td>President</td><td>26000</td></tr>
+<tr><td>Would </td><td> 25000</td></tr>
+<tr><td>One </td><td> 24000</td></tr>
+<tr><td>US</td><td> 20272</td></tr>
+<tr><td>Obama </td><td> 19145</td></tr>
+<tr><td>Also </td><td> 17145</td></tr>
+<tr><td>New </td><td> 14145</td></tr>
+<tr><td>News </td><td> 14145</td></tr>
+<tr><td>Even </td><td> 13145</td></tr>
+<tr><td>Hillary </td><td> 13145</td></tr>
+<tr><td>white </td><td> 12145</td></tr>
+<tr><td>Time </td><td> 12145</td></tr>
+<tr><td>State </td><td> 12145</td></tr>
+<tr><td>Via </td><td> 15145</td></tr>
+</table>
+<img src="{{url_for('static', filename='I5.PNG')}}" align="middle" /><br/><hr/>
+<table border="1"  id="id">
+<tr><td>Subject</td><td>Count</td></tr>
+<tr><td>Trump</td><td>71000</td></tr>
+<tr><td>Said</td><td> 30000</td></tr>
+<tr><td>People</td><td>27000</td></tr>
+<tr><td>President</td><td>26000</td></tr>
+<tr><td>Would </td><td> 25000</td></tr>
+<tr><td>One </td><td> 24000</td></tr>
+<tr><td>US</td><td> 20272</td></tr>
+<tr><td>Obama </td><td> 19145</td></tr>
+<tr><td>Also </td><td> 17145</td></tr>
+<tr><td>New </td><td> 14145</td></tr>
+<tr><td>News </td><td> 14145</td></tr>
+<tr><td>Even </td><td> 13145</td></tr>
+<tr><td>Hillary </td><td> 13145</td></tr>
+<tr><td>white </td><td> 12145</td></tr>
+<tr><td>Time </td><td> 12145</td></tr>
+<tr><td>State </td><td> 12145</td></tr>
+<tr><td>Via </td><td> 15145</td></tr>
+</table>
+<img id="id6"src="{{url_for('static', filename='I6.PNG')}}" align="middle" /><br/><hr/>
+<img id="id7"src="{{url_for('static', filename='I7.PNG')}}" align="middle" /><br/><hr/>
+
+<br/></b></div>
+<div class="footer">
+  Fake News Detection
+</div>
+</body>
+</html>

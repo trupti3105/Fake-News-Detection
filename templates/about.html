@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+ 
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 100% 100%;
+  background-color: #ADD8E6;
+  font-size: 17px;
+}
+.div1 {  
+border-style: ridge;
+ padding: 70px;
+font-size: 17px;
+} 
+
+
+
+
+mark{ 
+  background-color: black;
+  color: white;
+}
+mark1{ 
+  background-color:purple;
+  color: white;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: black;
+    text-align: right;
+    color: #fff;
+   
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
+p
+{
+	line-height: 2.0;
+	font-weight: bold;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  display: flex;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header {
+  padding: 10px;
+  background: white;
+}
+
+.topnav-right {
+  float: right;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ @media screen and (max-width:600px) {
+                .columnA, .columnB, .columnC {
+                    width: 50%;
+                }
+            }
+            @media screen and (max-width:400px) {
+                .columnA, .columnB, .columnC {
+                    width: 100%;
+                }
+            }
+			
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a  href="home.html">Home</a>
+  <a href="index.html">Predict News</a>
+  <div class="topnav-right">
+    <a href="FakeNewsDetection.html">Display Data Visualization</a>
+    <a href="about.html">About</a>
+	<a href="aboutalgo.html">How it Works?</a>
+  </div>
+</div>
+
+
+<br/>
+<h1 align="center"><mark1>About Fake News Detection</mark1></h1>
+<div class="div1">
+ <div class="row">
+   <div class="column">
+  <p align="justify" style="color:black;">The main objective is to detect the fake news, which is a classic text classification problem with a straight forward proposition. 
+  It is needed to build a model that can differentiate between “Real” news and “Fake” news. </p>
+   
+  <p align="justify" style="color:black;">These days’ fake news is creating different issues from sarcastic articles to a fabricated news and plan government 
+  propaganda in some outlets.</p> </div>
+  <div class="column">
+   <p align="justify" style="color:black;" >
+ Fake news and lack of trust in the media are growing problems with huge ramifications in our society. 
+  Obviously, a purposely misleading story is “fake news “  but lately blathering social media’s discourse is changing its definition. 
+  Some of them now use the term to dismiss the facts counter to their preferred viewpoints. 
+  
+  This Project is to solve the problem with fake news. 
+  In this we have used two datasets named "Fake" and "True" from Kaggle. </div>
+  </div>
+ </div> 
+  <div class="footer">
+  Fake News Detection
+</div>
+
+  
+  <!--Algorithms used in this Project are  Naive Bayes, Random Forest, Decision Tree, SVM, Logistic Regression.<br>-->
+ 
+
+</body>
+</html>

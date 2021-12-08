@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+<head>
+ 
+  <title>Fake News 📰 Detection System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+<style>
+		body{
+			background:#F5F5F5;
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background:#ADD8E6;
+		}
+		
+		
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+
+.topnav-right {
+  float: right;
+}
+
+	</style>
+</head>
+
+<body>
+<div class="topnav">
+  <a  href="home.html">Home</a>
+  <a href="index.html">Predict News</a>
+  <div class="topnav-right">
+    <a href="FakeNewsDetection.html">Display Data Visualization</a>
+    <a href="about.html">About</a>
+	<a href="aboutalgo.html">How it Works?</a>
+  </div>
+</div>
+
+ <div class="login">
+ <center><h1 style="color:blue;">Fake News  📰  Detector</h1></center>
+	<div align="center" style="margin-top: 10px;" class="container">
+		<br/><h3 style="color:indigo;"> 🤔 🤔Is your News article Fake or True?</h3>
+			
+			
+
+    <form action="{{ url_for('predict')}}" method="POST">
+    	<textarea  name="message" class="form-control bg-dark text-white" required="required" placeholder="Paste your News Here!" rows="8"style="font-size: 18pt"></textarea>
+		<br> 
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict News</button>
+		<div class="results">
+
+	{% if prediction == ['FAKE']%} 
+	<div>
+		<br><h2  style="color:red;">Looking Fake News ✗  </h2>
+	</div>
+	
+	{% elif prediction == ['REAL']%}
+				
+	<div>
+  
+  <br><h2  style="color: darkgreen;"> Looking Real News ✓ </h2>
+</div></div>
+
+	{% endif %} 
+
+	</div>
+	
+	</form><br/><br/>
+
+</body>
+</html>
